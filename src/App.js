@@ -9,7 +9,7 @@ function App() {
             <div className="App">
                 <Routes>
                     {
-                        publicRoutes.map(route => {
+                        publicRoutes.map((route,index) => {
                             let Layout = DefaultLayout
 
                             if(route.layout){
@@ -18,7 +18,7 @@ function App() {
                                 Layout = Fragment
                             }
 
-                            return <Route path={route.path} element={<Layout>{route.component}</Layout>} />
+                            return <Route key={index} path={route.path} element={<Layout>{route.component}</Layout>} />
                         })
                     }
                 </Routes>

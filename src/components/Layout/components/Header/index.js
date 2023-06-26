@@ -1,7 +1,9 @@
+import { HeaderModule } from '~/components/Style/CssModule';
+
+
 function Header() {
-    return ( 
-        <h2>Header</h2>
-     );
+    const cx = HeaderModule()
+    return <header className={cx("wrapper")} >Header</header>;
 }
 
 export default Header;

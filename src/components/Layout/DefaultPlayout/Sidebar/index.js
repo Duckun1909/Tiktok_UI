@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
+import { SidebarModule } from '~/components/Style/CssModule';
 
 function Sidebar() {
+    const cx = SidebarModule()
+
     return (
-        <div>
+        <aside className={cx("wrapper")}>
             <h2>Sidebar</h2>
             <ul>
                 <li>
@@ -15,7 +18,7 @@ function Sidebar() {
                     <Link to="/profile">Profile</Link>
                 </li>
             </ul>
-        </div>
+        </aside>
     );
 }
 
